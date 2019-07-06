@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>LightestNight.System.Utilities</AssemblyName>
+        <RootNamespace>LightestNight.System.Utilities</RootNamespace>
+        <LangVersion>latest</LangVersion>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>LightestNight.System.Utilities</PackageId>
+        <Authors>James Woodley</Authors>
+        <Company>LightestNight Ltd</Company>
+        <Title>LightestNight :: System :: Utilities</Title>
+        <Description>Utility and helpers that underpin the LightestNight ecosystem</Description>
+        <PackageTags>lightestnight;system;infrastructure;service;utilities</PackageTags>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <InformationalVersion>1.0.0</InformationalVersion>
+    </PropertyGroup>
+
+</Project>
