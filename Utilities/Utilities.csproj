@@ -20,6 +20,8 @@
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
         <InformationalVersion>1.0.0</InformationalVersion>
+        <PackageIconUrl>https://www.gravatar.com/avatar/01d9ae6081c5243ef46b38dc4056f9d8</PackageIconUrl>
+        <RepositoryUrl>https://github.com/lightestnight/system-utilities</RepositoryUrl>
     </PropertyGroup>
 
 </Project>
