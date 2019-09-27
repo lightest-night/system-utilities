@@ -24,4 +24,8 @@
         <RepositoryUrl>https://github.com/lightestnight/system-utilities</RepositoryUrl>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    </ItemGroup>
+
 </Project>
