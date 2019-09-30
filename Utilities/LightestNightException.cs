@@ -48,7 +48,7 @@ namespace LightestNight.System.Utilities
         /// <summary>
         /// The Frames within the <see cref="Exception" />
         /// </summary>
-        public IEnumerable<Frame> Frames { get; set; }
+        public Frame[] Frames { get; set; }
 
         public LightestNightException(Exception ex)
         {
@@ -61,7 +61,7 @@ namespace LightestNight.System.Utilities
                 Method = frame.GetMethod().Name,
                 ClassName = frame.GetMethod().DeclaringType?.AssemblyQualifiedName,
                 Arguments = frame.GetMethod().GetParameters().Select(arg => arg.Name).ToArray()
-            });
+            }).ToArray();
         }
     }
 }
