@@ -1,6 +1,4 @@
-using System;
 using LightestNight.System.Utilities.Extensions;
-using Newtonsoft.Json;
 using Shouldly;
 using Xunit;
 
@@ -38,13 +36,14 @@ namespace LightestNight.System.Utilities.Tests.Extensions
         {
             // Arrange
             var testObject = new TestObject();
-            var testString = string.Format(pattern, JsonConvert.SerializeObject(testObject));
+            var testString = string.Format(pattern, testObject.SerializeWithType());
             
             // Act
-            var result = testString.ExtractObject<TestObject>();
+            var result = testString.ExtractObject();
             
             // Assert
             result.ShouldBe(testObject);
+            result.ShouldBeOfType<TestObject>();
         }
 
         [Theory]
@@ -59,13 +58,14 @@ namespace LightestNight.System.Utilities.Tests.Extensions
             {
                 InnerTestObject = new TestObject()
             };
-            var testString = string.Format(pattern, JsonConvert.SerializeObject(testObject));
+            var testString = string.Format(pattern, testObject.SerializeWithType());
             
             // Act
-            var result = testString.ExtractObject<TestObject>();
+            var result = testString.ExtractObject();
             
             // Assert
             result.ShouldBe(testObject);
+            result.ShouldBeOfType<TestObject>();
         }
     }
 }
