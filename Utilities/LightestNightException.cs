@@ -52,6 +52,9 @@ namespace LightestNight.System.Utilities
 
         public LightestNightException(Exception ex)
         {
+            if (ex == null)
+                return;
+            
             Exception = ex;
             Frames = new StackTrace(ex, true).GetFrames()?.Select(frame => new Frame
             {
