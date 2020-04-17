@@ -13,7 +13,9 @@ namespace LightestNight.System.Utilities.Tests.Extensions
         public void Should_Return_Null()
         {
             // Act
-            var result = ((IEnumerable<int>) null).IsNullOrEmpty();
+            #nullable disable
+            var result = (null as IEnumerable<int>).IsNullOrEmpty();
+            #nullable restore
             
             // Assert
             result.ShouldBeTrue();

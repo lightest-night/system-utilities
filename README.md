@@ -38,3 +38,7 @@ Utility and helpers that underpin the LightestNight ecosystem
   
 * `DateTime GuidGenerator.GetUtcDateTime(Guid guid)`
   * Gets the Date &amp; Time that was used to generate the Guid in UTC
+  
+### Attributes
+* `GetCustomAttributeValue<TAttributeType, TValue>(MemberInfo type, Func<TAttributeType, TValue> predicate, TValue defaultValue)`
+  * Allows the retrieval of a value from an attribute property using the given predicate

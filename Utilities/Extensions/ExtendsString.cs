@@ -9,7 +9,7 @@ namespace LightestNight.System.Utilities.Extensions
             TypeNameHandling = TypeNameHandling.All
         };
         
-        public static object ExtractObject(this string target)
+        public static object? ExtractObject(this string target)
         {
             var objectStartIndex = target.IndexOf('{');
             var objectStr = target.Substring(
