@@ -14,7 +14,7 @@ namespace LightestNight.System.Utilities.Extensions
         /// <param name="target">The <see cref="IEnumerable{T}" /> to check</param>
         /// <typeparam name="T">The Type the <see cref="IEnumerable{T}" /> holds</typeparam>
         /// <returns>Boolean denoting whether the <see cref="IEnumerable{T}" /> is null or empty</returns>
-        public static bool IsNullOrEmpty<T>(this IEnumerable<T> target)
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T>? target)
             => target == null || !target.Any();
 
         /// <summary>
