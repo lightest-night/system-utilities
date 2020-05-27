@@ -35,15 +35,15 @@ namespace LightestNight.System.Utilities.Generators
             random.NextBytes(DefaultNode);
         }
 
-        public static GuidVersion GetVersion(this Guid guid)
+        public static GuidVersion GetVersion(this Guid id)
         {
-            var bytes = guid.ToByteArray();
+            var bytes = id.ToByteArray();
             return (GuidVersion) ((bytes[VersionByte] & 0xFF) >> VersionByteShift);
         }
 
-        public static DateTimeOffset GetDateTimeOffset(Guid guid)
+        public static DateTimeOffset GetDateTimeOffset(Guid id)
         {
-            var bytes = guid.ToByteArray();
+            var bytes = id.ToByteArray();
             bytes[VersionByte] &= VersionByteMask;
             bytes[VersionByte] |= (byte) GuidVersion.TimeBased >> VersionByteShift;
 
@@ -56,14 +56,14 @@ namespace LightestNight.System.Utilities.Generators
             return new DateTimeOffset(ticks, TimeSpan.Zero);
         }
 
-        public static DateTime GetDateTime(Guid guid)
-            => GetDateTimeOffset(guid).DateTime;
+        public static DateTime GetDateTime(Guid id)
+            => GetDateTimeOffset(id).DateTime;
 
-        public static DateTime GetLocalDateTime(Guid guid)
-            => GetDateTimeOffset(guid).LocalDateTime;
+        public static DateTime GetLocalDateTime(Guid id)
+            => GetDateTimeOffset(id).LocalDateTime;
 
-        public static DateTime GetUtcDateTime(Guid guid)
-            => GetDateTimeOffset(guid).UtcDateTime;
+        public static DateTime GetUtcDateTime(Guid id)
+            => GetDateTimeOffset(id).UtcDateTime;
 
         public static Guid GenerateTimeBasedGuid()
             => GenerateTimeBasedGuid(DateTimeOffset.UtcNow, DefaultClockSequence, DefaultNode);

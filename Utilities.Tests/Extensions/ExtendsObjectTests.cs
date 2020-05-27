@@ -13,7 +13,7 @@ namespace LightestNight.System.Utilities.Tests.Extensions
     public class ExtendsObjectTests
     {
         [Fact]
-        public void Should_Serialize_With_Type_Information()
+        public void ShouldSerializeWithTypeInformation()
         {
             // Arrange
             var obj = new TestObject();
@@ -32,7 +32,7 @@ namespace LightestNight.System.Utilities.Tests.Extensions
             TestObject? obj = null;
             
             // Act/Assert
-            Should.Throw<ArgumentNullException>(() => obj.ThrowIfNull());
+            Should.Throw<ArgumentNullException>(() => obj.ThrowIfNull(nameof(obj)));
         }
 
         [Fact]
@@ -48,16 +48,14 @@ namespace LightestNight.System.Utilities.Tests.Extensions
             exception.ParamName.ShouldBe(nameof(obj));
         }
 
-        [Theory]
-        [InlineData("obj")]
-        [InlineData(null)]
-        public void ShouldNotThrowIfNotNull(string? paramName)
+        [Fact]
+        public void ShouldNotThrowIfNotNull()
         {
             // Arrange
             var obj = new TestObject();
             
             // Act/Assert
-            Should.NotThrow(() => obj.ThrowIfNull(paramName));
+            Should.NotThrow(() => obj.ThrowIfNull(nameof(obj)));
         }
     }
 }

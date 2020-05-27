@@ -23,7 +23,7 @@ namespace LightestNight.System.Utilities.Extensions
         /// <param name="interfaceType">The type of the Interface to look for instances of</param>
         /// <returns>Collection of types that implement the given Interface</returns>
         public static IEnumerable<Type> GetInstancesOfInterface(this Assembly assembly, Type interfaceType)
-            => assembly.GetTypes()
+            => assembly.ThrowIfNull(nameof(assembly)).GetTypes()
                 .Where(t => interfaceType.IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
     }
 }

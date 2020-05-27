@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using LightestNight.System.Utilities.Extensions;
 
 namespace LightestNight.System.Utilities
 {
@@ -8,10 +9,11 @@ namespace LightestNight.System.Utilities
         public static TValue GetCustomAttributeValue<TAttributeType, TValue>(MemberInfo type, Func<TAttributeType, TValue> predicate, TValue defaultValue = default)
             where TAttributeType : Attribute
         {
-            if (Attribute.GetCustomAttribute(type, typeof(TAttributeType)) is TAttributeType attrType)
-                return predicate(attrType);
-
-            return defaultValue;
+            if (!(Attribute.GetCustomAttribute(type, typeof(TAttributeType)) is TAttributeType attrType))
+                return defaultValue;
+            
+            predicate.ThrowIfNull(nameof(predicate));
+            return predicate(attrType);
         }
     }
 }

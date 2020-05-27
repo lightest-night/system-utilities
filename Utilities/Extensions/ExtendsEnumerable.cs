@@ -30,7 +30,7 @@ namespace LightestNight.System.Utilities.Extensions
                 using (partition)
                 {
                     while (partition.MoveNext())
-                        await body(partition.Current);
+                        await body(partition.Current).ConfigureAwait(false);
                 }
             }));
     }
