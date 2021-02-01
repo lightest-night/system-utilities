@@ -14,7 +14,7 @@ namespace LightestNight.System.Utilities.Tests.Generators
             var result = GuidGenerator.GenerateTimeBasedGuid();
             
             // Assert
-            result.ShouldNotBeNull();
+            result.ShouldNotBe(Guid.Empty);
         }
 
         [Fact]

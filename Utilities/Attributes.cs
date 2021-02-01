@@ -11,7 +11,7 @@ namespace LightestNight.System.Utilities
             if (Attribute.GetCustomAttribute(type, typeof(TAttributeType)) is TAttributeType attrType)
                 return predicate(attrType);
 
-            return defaultValue;
+            return defaultValue!;
         }
     }
 }

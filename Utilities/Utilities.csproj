@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
         <AssemblyName>LightestNight.System.Utilities</AssemblyName>
         <RootNamespace>LightestNight.System.Utilities</RootNamespace>
-        <LangVersion>latest</LangVersion>
+        <LangVersion>default</LangVersion>
         <IsPackable>true</IsPackable>
         <Nullable>enable</Nullable>
+        <TargetFrameworks>net5.0;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
     <PropertyGroup>
