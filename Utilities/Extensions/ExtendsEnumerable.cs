@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LightestNight.System.Utilities.Extensions
+namespace LightestNight.Utilities.Extensions
 {
     public static class ExtendsEnumerable
     {

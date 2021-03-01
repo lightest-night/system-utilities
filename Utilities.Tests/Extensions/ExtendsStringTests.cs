@@ -1,8 +1,8 @@
-using LightestNight.System.Utilities.Extensions;
+using LightestNight.Utilities.Extensions;
 using Shouldly;
 using Xunit;
 
-namespace LightestNight.System.Utilities.Tests.Extensions
+namespace LightestNight.Utilities.Tests.Extensions
 {
     public class ExtendsStringTests
     {

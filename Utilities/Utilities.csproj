@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <AssemblyName>LightestNight.System.Utilities</AssemblyName>
-        <RootNamespace>LightestNight.System.Utilities</RootNamespace>
+        <AssemblyName>LightestNight.Utilities</AssemblyName>
+        <RootNamespace>LightestNight.Utilities</RootNamespace>
         <LangVersion>default</LangVersion>
         <IsPackable>true</IsPackable>
         <Nullable>enable</Nullable>
@@ -10,10 +10,10 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>LightestNight.System.Utilities</PackageId>
+        <PackageId>LightestNight.Utilities</PackageId>
         <Authors>James Woodley</Authors>
         <Company>LightestNight Ltd</Company>
-        <Title>LightestNight :: System :: Utilities</Title>
+        <Title>LightestNight :: Utilities</Title>
         <Description>Utility and helpers that underpin the LightestNight ecosystem</Description>
         <PackageTags>lightestnight;system;infrastructure;service;utilities</PackageTags>
         <Version>1.0.0</Version>
@@ -23,7 +23,7 @@
         <InformationalVersion>1.0.0</InformationalVersion>
         <PackageIconUrl />
         <PackageIcon>icon.jpeg</PackageIcon>
-        <RepositoryUrl>https://github.com/lightestnight/system.utilities</RepositoryUrl>
+        <RepositoryUrl>https://github.com/lightestnight/utilities</RepositoryUrl>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

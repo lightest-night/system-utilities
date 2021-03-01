@@ -1,9 +1,9 @@
 using System;
-using LightestNight.System.Utilities.Generators;
+using LightestNight.Utilities.Generators;
 using Shouldly;
 using Xunit;
 
-namespace LightestNight.System.Utilities.Tests.Generators
+namespace LightestNight.Utilities.Tests.Generators
 {
     public class GuidGeneratorTests
     {

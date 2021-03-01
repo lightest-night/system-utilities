@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace LightestNight.System.Utilities
+namespace LightestNight.Utilities
 {
     public static class Attributes
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace LightestNight.System.Utilities.Generators
+namespace LightestNight.Utilities.Generators
 {
     /// <summary>
     /// Used for generating UUID based on RFC 4122.

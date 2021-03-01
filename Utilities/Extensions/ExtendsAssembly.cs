@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace LightestNight.System.Utilities.Extensions
+namespace LightestNight.Utilities.Extensions
 {
     public static class ExtendsAssembly
     {

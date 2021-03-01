@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace LightestNight.System.Utilities.Extensions
+namespace LightestNight.Utilities.Extensions
 {
     public static class ExtendsObject
     {
